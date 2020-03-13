@@ -5,6 +5,7 @@
 // Last updated on 3/12/2020
 
 #include <memory> // std::shared_ptr
+#include <vector> // std::vector
 
 #ifndef ROOM_HPP
 #define ROOM_HPP
@@ -20,10 +21,7 @@ class Room
 	   They will be initialized as nullptr so we will need
 	   to check for that in functions.
 	*/
-	std::shared_ptr<Room> _roomUp = nullptr;
-	std::shared_ptr<Room> _roomLeft = nullptr;
-	std::shared_ptr<Room> _roomRight = nullptr;
-	std::shared_ptr<Room> _roomDown = nullptr;
+	std::vector<std::shared_ptr<Room>> _adjRooms = { nullptr, nullptr, nullptr, nullptr };
 
 	public:
 
@@ -33,18 +31,16 @@ class Room
 
 	~Room();
 
-	short int ID();
+	short int ID() const;
 
-	std::shared_ptr<Room> roomUp();
-	std::shared_ptr<Room> roomLeft();
-	std::shared_ptr<Room> roomRight();
-	std::shared_ptr<Room> roomDown();
+	void setID(short int id);
 
-	void setRoomUp(const Room& room);
-	void setRoomLeft(const Room& room);
-	void setRoomRight(const Room& room);
-	void setRoomDown(const Room& room);
+	std::shared_ptr<Room> getRoom(short int index) const;
+
+	void setRoom(const Room& room, short int index);
 };
+
+bool operator == (const Room& room1, const Room& room2);
 
 bool areRoomsAdjacent(const Room& room1, const Room& room2);
 

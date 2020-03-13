@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClCompile Include="HTW_main_file.cpp" />
     <ClCompile Include="lib\tilemap.cpp" />
+    <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Room.hpp" />
