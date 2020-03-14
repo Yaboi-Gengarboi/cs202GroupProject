@@ -2,11 +2,12 @@
 // Justyn Durnford
 // Izac Lorimer
 // Created on 3/12/2020
-// Last updated on 3/12/2020
+// Last updated on 3/13/2020
 
 #include "Room.hpp"
+// <memory>
+// <vector>
 
-#include <memory>
 using std::shared_ptr;
 using std::make_shared;
 
@@ -41,7 +42,7 @@ void Room::setRoom(const Room& room, short int index)
 
 bool operator == (const Room& room1, const Room& room2)
 {
-	return ( room1.ID() == room2.ID() );
+	return (room1.ID() == room2.ID());
 }
 
 bool areRoomsAdjacent(const Room& room1, const Room& room2)

@@ -146,6 +146,7 @@
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Player.hpp" />
     <ClInclude Include="Room.hpp" />
     <ClInclude Include="lib\tilemap.hpp" />
   </ItemGroup>
