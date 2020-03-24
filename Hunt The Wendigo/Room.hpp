@@ -2,7 +2,7 @@
 // Justyn Durnford
 // Izac Lorimer
 // Created on 3/12/2020
-// Last updated on 3/13/2020
+// Last updated on 3/24/2020
 
 #include <memory> // std::shared_ptr
 #include <array> // std::array
@@ -42,11 +42,11 @@ class Room
 	void setID(short int id);
 
 	// Returns a shared_ptr to the adjacent room specified by index.
-	std::shared_ptr<Room> getRoom(short int index) const;
+	std::shared_ptr<Room> getAdjacentRoom(short int index) const;
 
 	// Sets the value of the shared_ptr to the adjacent room specified
 	// by index to point to room.
-	void setRoom(const Room& room, short int index);
+	void setAdjacentRoom(const Room& room, short int index);
 };
 
 // Returns true if the two rooms have the same ID.

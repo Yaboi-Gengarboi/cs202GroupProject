@@ -2,7 +2,7 @@
 // Justyn Durnford
 // Izac Lorimer
 // Created on 3/12/2020
-// Last updated on 3/13/2020
+// Last updated on 3/24/2020
 
 #include "Room.hpp"
 // <memory>
@@ -30,14 +30,18 @@ void Room::setID(short int id)
 	_id = id;
 }
 
-shared_ptr<Room> Room::getRoom(short int index) const
+shared_ptr<Room> Room::getAdjacentRoom(short int index) const
 {
-	return _adjRooms[index];
+	if (index >= 0 && index < 4)
+		return _adjRooms[index];
+
+	return nullptr;
 }
 
-void Room::setRoom(const Room& room, short int index)
+void Room::setAdjacentRoom(const Room& room, short int index)
 {
-	_adjRooms[index] = make_shared<Room>(room);
+	if (index >= 0 && index < 4)
+		_adjRooms[index] = make_shared<Room>(room);
 }
 
 bool operator == (const Room& room1, const Room& room2)
@@ -49,7 +53,7 @@ bool areRoomsAdjacent(const Room& room1, const Room& room2)
 {
 	for (short int i = 0; i < 4; ++i)
 	{
-		if (*(room1.getRoom(i)) == room2)
+		if (*(room1.getAdjacentRoom(i)) == room2)
 			return true;
 	}
 
