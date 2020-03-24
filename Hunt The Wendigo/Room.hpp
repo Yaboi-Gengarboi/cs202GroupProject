@@ -5,7 +5,7 @@
 // Last updated on 3/13/2020
 
 #include <memory> // std::shared_ptr
-#include <vector> // std::vector
+#include <array> // std::array
 
 #ifndef ROOM_HPP
 #define ROOM_HPP
@@ -22,7 +22,7 @@ class Room
 	// These std::shared_ptrs will point to adjacent rooms.
 	// They will be initialized as nullptr so we will need
 	// to check for that in functions.
-	std::vector<std::shared_ptr<Room>> _adjRooms = { nullptr, nullptr, nullptr, nullptr };
+	std::array<std::shared_ptr<Room>, 4> _adjRooms = { nullptr, nullptr, nullptr, nullptr };
 
 	public:
 

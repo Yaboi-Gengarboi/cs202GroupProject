@@ -143,12 +143,14 @@
   <ItemGroup>
     <ClCompile Include="HTW_main_file.cpp" />
     <ClCompile Include="lib\tilemap.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="Room.hpp" />
     <ClInclude Include="lib\tilemap.hpp" />
+    <ClInclude Include="Wendigo.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
