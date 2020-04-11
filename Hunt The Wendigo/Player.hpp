@@ -23,9 +23,6 @@ class Player
 
 	public:
 
-	// Default constructor. Don't use.
-	Player();
-
 	// Standard cinstructor.
 	Player(const Room& currentRoom, int health);
 

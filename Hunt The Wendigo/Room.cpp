@@ -11,8 +11,6 @@
 using std::shared_ptr;
 using std::make_shared;
 
-Room::Room() {}
-
 Room::Room(short int id)
 {
 	_id = id;

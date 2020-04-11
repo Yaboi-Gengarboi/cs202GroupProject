@@ -12,8 +12,6 @@
 using std::shared_ptr;
 using std::make_shared;
 
-Player::Player() {}
-
 Player::Player(const Room& currentRoom, int health)
 {
 

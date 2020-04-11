@@ -25,9 +25,6 @@ class Room
 	std::array<std::shared_ptr<Room>, 4> _adjRooms = { nullptr, nullptr, nullptr, nullptr };
 
 	public:
-
-	// Default constructor. Don't use.
-	Room();
 	
 	// Standard constructor.
 	Room(short int id);
