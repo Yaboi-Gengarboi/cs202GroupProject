@@ -15,22 +15,30 @@ class TileMap : public sf::Drawable, public sf::Transformable
 {
   public:
     /**
-     * Sum numbers in a vector.
+     * Load spritesheet
      *
      * @param tex the path to the texture to use for this TileMap
-     * @param tileSize How big each tile should be drawn on screen
-     * @param tiles Map of textures to be drawn
-     * @param width Width of the texture map in tiles
-     * @param height Height of the texture map in tiles.
+     * @param tileSize Size the tiles should be drawn on-screen
+     * @param width Width of the map
+     * @param height Height of the map
      * @return if the loading of the map was successful
      */
-    bool load(const char * tilesetPath, int tileSize, const int* tiles,
-      unsigned int width, unsigned int height);
+    bool load(const char * tex, int tileSize, int width, int height);
+
+    /**
+     * Sets the map of the TileMap
+     *
+     * @param tiles Map of textures to be drawn
+     */
+    void set(const int* tiles);
 
   private:
   virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
   sf::VertexArray vertices;
   sf::Texture tileset;
+  int width;
+  int height;
+  int tileSize;
 };
 
 #endif
