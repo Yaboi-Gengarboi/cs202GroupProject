@@ -51,22 +51,22 @@ int main()
             if (event.type == sf::Event::Closed) {
                 window.close();
             }
+        }
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-                posX--;
-            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+            posX--;
+        }
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-                posX++;
-            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+            posX++;
+        }
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-                posY++;
-            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            posY++;
+        }
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-                posY--;
-            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+            posY--;
         }
 
         for (int i = 0; i < 32*32; i++) {
