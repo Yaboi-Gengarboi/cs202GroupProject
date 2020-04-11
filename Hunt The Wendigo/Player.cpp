@@ -12,16 +12,16 @@
 using std::shared_ptr;
 using std::make_shared;
 
-Player::Player(const Room& currentRoom, int health)
+Player::Player(int health)
 {
-
+	
 }
 
 Player::~Player() {}
 
-shared_ptr<Room> Player::currentRoom() const
+std::pair<int, int> Player::getPosition() const
 {
-	return _currentRoom;
+	return _position;
 }
 
 int Player::health() const
@@ -29,9 +29,9 @@ int Player::health() const
 	return _health;
 }
 
-void Player::setCurrentRoom(const Room& room)
+void Player::setPosition(int x, int y)
 {
-	_currentRoom = make_shared<Room>(room);
+	_position = std::pair<int, int>(x, y);
 }
 
 void Player::damage(int health)
@@ -42,4 +42,8 @@ void Player::damage(int health)
 void Player::heal(int health)
 {
 	_health += health;
+}
+
+void Player::setHealth(int health) {
+	_health = health;
 }
