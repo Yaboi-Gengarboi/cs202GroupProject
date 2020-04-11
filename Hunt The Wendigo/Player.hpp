@@ -5,7 +5,7 @@
 // Last updated on 3/14/2020
 
 #include <map>
-#include<memory>
+#include <memory>
 #include <utility>
 #include "Game.hpp"
 #include "lib/tilemap.hpp"
@@ -24,12 +24,12 @@ class Player
 	std::pair<int, int> _position{0, 0};
 
 	// The inventory of the player. Stores items that they are currently holding.
-	std::shared_ptr<std::map<int, Item>> _inventory = std::make_shared<std::map<int, Item>>();
+	std::shared_ptr<std::map<int, int>> _inventory = std::make_shared<std::map<int, int>>();
 
 	public:
 
 	// Standard cinstructor.
-	Player(int health);
+	Player(const int health);
 
 	// Destructor.
 	~Player();

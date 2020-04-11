@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="HTW_main_file.cpp" />
     <ClCompile Include="lib\FastNoise\FastNoise.cpp" />
     <ClCompile Include="lib\tilemap.cpp" />

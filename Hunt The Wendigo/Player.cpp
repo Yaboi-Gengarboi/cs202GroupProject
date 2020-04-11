@@ -9,10 +9,8 @@
 // <memory>
 // <array>
 
-using std::shared_ptr;
-using std::make_shared;
 
-Player::Player(int health)
+Player::Player(const int health)
 {
 	
 }
