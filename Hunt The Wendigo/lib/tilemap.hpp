@@ -36,9 +36,9 @@ class TileMap : public sf::Drawable, public sf::Transformable
   virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
   sf::VertexArray vertices;
   sf::Texture tileset;
-  int width;
-  int height;
-  int tileSize;
+  int width = 0;
+  int height = 0;
+  int tileSize = 0;
 };
 
 #endif
